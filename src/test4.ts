@@ -5,18 +5,19 @@ import {print} from "./util";
  * Demo for `catch` usage
  */
 
-new Promise<string>((resolve, reject) => {
+new Promise<string>(resolve => {
     print("promise constructor");
 
     const obj: any = {};
     print(obj.a.b);
 
     resolve("resolved result");
-}).then(
-    result => {
+})
+    .then(result => {
+        print("resolved");
         print(result);
-    },
-    error => {
+    })
+    .catch(error => {
+        print("rejected");
         print(error);
-    }
-);
+    });

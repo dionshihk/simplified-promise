@@ -10,9 +10,11 @@ new Promise<string>((resolve, reject) => {
     reject(new Error("Boom"));
 }).then(
     result => {
+        print("resolved");
         print(result);
     },
     error => {
+        print("rejected");
         print(error);
     }
 );

@@ -1,7 +1,7 @@
 import {print} from "./util";
 
 /**
- * Demo for a future resolve
+ * Demo for a delayed resolve
  */
 
 new Promise<number>(resolve => {
