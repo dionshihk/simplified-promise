@@ -1,5 +1,4 @@
 import {print} from "./util";
-import * as Process from "process";
 
 /**
  * Demo for
