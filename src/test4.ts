@@ -12,12 +12,7 @@ new Promise<string>(resolve => {
     print(obj.a.b);
 
     resolve("resolved result");
-})
-    .then(result => {
-        print("resolved");
-        print(result);
-    })
-    .catch(error => {
-        print("rejected");
-        print(error);
-    });
+}).catch(error => {
+    print("rejected");
+    print(error);
+});
