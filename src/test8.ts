@@ -1,7 +1,7 @@
 import {print} from "./util";
 
 /**
- * Demo for resolve chaining of Promise
+ * Demo for resolve chaining of DionPromise
  */
 
 new Promise<number>(resolve => {
@@ -14,6 +14,10 @@ new Promise<number>(resolve => {
         return new Promise<string>(resolve => {
             setTimeout(() => resolve(result.toFixed(2)), 2000);
         });
+    })
+    .then(result => {
+        print(result);
+        return result + "a";
     })
     .then(result => {
         print(result);
