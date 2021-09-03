@@ -1,11 +1,16 @@
 type Status = "RESOLVED" | "REJECTED" | "PENDING";
 
-// type ConstructorArg = ?
-// type ResolveFn = ?
-// type RejectFn = ?
-// type OnResolveFn = ?
-// type OnRejectFn = ?
+type ConstructorArg<T> = {};
+type ResolveFn = {};
+type RejectFn = {};
+
+type OnResolveArg = {};
+type OnRejectArg = {};
 
 export class DionPromise<T> {
-    constructor() {}
+    constructor(executor: ConstructorArg<T>) {}
+
+    then() {}
+
+    catch() {}
 }
